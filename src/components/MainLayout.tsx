@@ -2,14 +2,9 @@ import { useState } from 'react';
 import Dashboard from './Dashboard';
 import LEDControl from './LEDControl';
 import SawahSidebar from './SawahSideBar';
-import { HistoryItem, LEDState, WILAYAH_LED } from '../types/types';
+import { WILAYAH_LED } from '../types/types';
 
 const MainLayout: React.FC = () => {
-  const [leds, setLeds] = useState<LEDState[]>(
-    WILAYAH_LED.map(() => ({ isOn: false, startTime: null }))
-  );
-  const [hargaSewa, setHargaSewa] = useState(5000);
-  const [history, setHistory] = useState<HistoryItem[]>([]);
   const [activePage, setActivePage] = useState('dashboard');
   const [sawahName, setSawahName] = useState('Sawah 1');
   const [isSidebarOpen, setIsSidebarOpen] = useState(true);
@@ -24,7 +19,7 @@ console.log("Sawah Name",sawahName)
   const renderContent = () => {
     switch (activePage) {
       case 'dashboard':
-        return <Dashboard leds={leds} hargaSewa={hargaSewa} />;
+        return <Dashboard />;
       case 'led-control':
         return <LEDControl 
         />;

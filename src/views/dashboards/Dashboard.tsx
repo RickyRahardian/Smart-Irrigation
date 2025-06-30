@@ -1,10 +1,5 @@
 import { Link } from 'react-router';
-import BlogCards from 'src/components/dashboard/BlogCards';
-import DailyActivity from 'src/components/dashboard/DailyActivity';
-import NewCustomers from 'src/components/dashboard/NewCustomers';
-import ProductRevenue from 'src/components/dashboard/ProductRevenue';
-import { RevenueForecast } from 'src/components/dashboard/RevenueForecast';
-import TotalIncome from 'src/components/dashboard/TotalIncome';
+
 
 const Dashboard = () => {
   return (
@@ -12,30 +7,35 @@ const Dashboard = () => {
       <div className="lg:col-span-12 col-span-12">
         <div className="grid lg:grid-cols-12 grid-cols-4 gap-4">
           <div className="col-span-4">
-          <TotalIncome title='Waktu Penggunaan Total' description='00:00:00' />
+          <div className="col-span-4">
+            <div className="text-2xl font-bold">Waktu Penggunaan Total</div>
+            <div className="text-sm text-gray-500">00:00:00</div>
           </div>
           <div className="col-span-4">
-            <TotalIncome title='Biaya Total' description='Rp.0'  />
+            <div className="text-2xl font-bold">Biaya Total</div>
+            <div className="text-sm text-gray-500">Rp.0</div>
           </div>
           <div className="col-span-4">
-            <TotalIncome title='Status Pompa' description='On'  />
+            <div className="text-2xl font-bold">Status Pompa</div>
+            <div className="text-sm text-gray-500">On</div>
           </div>
           <div className="col-span-4">
-            <TotalIncome title='Biaya Sewa per Jam' description='Rp.5000'  />
+            <div className="text-2xl font-bold">Biaya Sewa per Jam</div>
+            <div className="text-sm text-gray-500">Rp.5000</div>
           </div>
         </div>
       </div>
       <div className="lg:col-span-12 col-span-12">
-        <RevenueForecast />
+        <div className="text-2xl font-bold">Revenue Forecast</div>
       </div>
       <div className="lg:col-span-8 col-span-12">
-        <ProductRevenue />
+        <div className="text-2xl font-bold">Product Revenue</div>
       </div>
       <div className="lg:col-span-4 col-span-12 flex">
-        <DailyActivity />
+        <div className="text-2xl font-bold">Daily Activity</div>
       </div>
       <div className="col-span-12">
-        <BlogCards />
+        <div className="text-2xl font-bold"></div>Blog Cards</div>
       </div>
       <div className="flex justify-center align-middle gap-2 flex-wrap col-span-12 text-center">
         <p className="text-base">

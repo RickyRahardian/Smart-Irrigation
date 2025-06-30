@@ -1,9 +1,8 @@
-import BasicTypography from "src/components/typography/BasicTypography"
 
 
 const Typography = () => {
   return (
-    <BasicTypography/>
+    <div className="text-2xl font-bold">Typography</div>
   )
 }
 

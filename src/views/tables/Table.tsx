@@ -1,10 +1,9 @@
-import { ProductTable } from "src/components/tables/ProductTable"
 
 
 const Table = () => {
   return (
      <>
-     <ProductTable/>
+     <div className="text-2xl font-bold">Table</div>
      </>
   )
 }

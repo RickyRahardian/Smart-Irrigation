@@ -1,9 +1,9 @@
-import { AllShadows } from "src/components/shadows/AllShadows"
+
 
 
 const Shadow = () => {
   return (
-    <AllShadows/>
+    <div className="text-2xl font-bold">Shadow</div>
   )
 }
 

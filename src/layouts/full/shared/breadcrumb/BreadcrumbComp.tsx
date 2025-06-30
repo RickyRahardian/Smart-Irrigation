@@ -1,7 +1,6 @@
 
 import { Badge, Breadcrumb } from "flowbite-react";
 import { Icon } from "@iconify/react";
-import CardBox from "src/components/shared/CardBox";
 
 interface BreadCrumbType {
   subtitle?: string;
@@ -13,7 +12,7 @@ interface BreadCrumbType {
 const BreadcrumbComp = ({ items, title }: BreadCrumbType) => {
   return (
     <>
-      <CardBox className={`mb-[30px] py-4`}>
+      <div className={`mb-[30px] py-4`}>
         <Breadcrumb className="flex justify-between">
           <h6 className="text-base">{title}</h6>
           <div className="flex items-center gap-3">
@@ -35,7 +34,7 @@ const BreadcrumbComp = ({ items, title }: BreadCrumbType) => {
               : ""}
           </div>
         </Breadcrumb>
-      </CardBox>
+      </div>
     </>
   );
 };

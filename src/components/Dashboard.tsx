@@ -1,12 +1,6 @@
 import React, { useMemo  } from 'react';
-import { LEDState } from '../types/types';
 import { useFirebase } from '../contexts/FirebaseContext';
 
-
-interface DashboardProps {
-  leds: LEDState[];
-  hargaSewa: number;
-}
 
 type HistoryItem = {
   sawah: string
@@ -25,7 +19,7 @@ const formatDuration = (durasi: { minutes: number; seconds: number }) => {
   return `${minutes}m ${seconds}s`
 }
 
-const Dashboard: React.FC<DashboardProps> = () => {
+const Dashboard: React.FC = () => {
   const { data } = useFirebase()
 
   
@@ -80,7 +74,7 @@ const Dashboard: React.FC<DashboardProps> = () => {
         sortedRegions
           .filter(([_, region]) => region.status)
           .slice(0, 1) // hanya ambil 1 yang aktif
-          .map(([regionKey, region]) => (
+          .map(([regionKey]) => (
             <div
               key={regionKey}
               className="p-3 rounded-lg text-center bg-green-100"
